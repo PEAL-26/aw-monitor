@@ -1,36 +1,116 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📊 AW Monitor
 
-## Getting Started
+AW Monitor é uma interface aprimorada para visualização dos eventos de **ActivityWatch**, construída com **Next.js 15** e **ui.shadcn**. Este projeto visa proporcionar uma experiência mais intuitiva e amigável para monitorar e visualizar as atividades rastreadas pelo ActivityWatch.
 
-First, run the development server:
+---
+
+## ✨ Funcionalidades
+
+- **Visualização de Eventos**: Exiba e explore todos os eventos capturados pelo ActivityWatch.
+- **Filtros Avançados**: Filtre os eventos por data, tipo, e outros critérios para facilitar a análise.
+- **Interface Moderna**: Design atualizado utilizando componentes do **ui.shadcn**.
+- **Performance Otimizada**: Desenvolvido com Next.js 15 para uma experiência de usuário rápida e responsiva.
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+- [Next.js 15](https://nextjs.org/) — Framework moderno para aplicações React com renderização híbrida.
+- [ui.shadcn](https://ui.shadcn.com/) — Biblioteca de componentes para criação de interfaces elegantes e consistentes.
+- [ActivityWatch API](https://activitywatch.net/) — API para captura e monitoramento de atividades.
+
+---
+
+## 🚀 Começando
+
+### Pré-requisitos
+
+- **Node.js** versão 18 ou superior
+- **NPM** para gerenciamento de pacotes
+
+### Instalação
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/peal-26/aw-monitor.git
+   ```
+2. Navegue até o diretório do projeto:
+   ```bash
+   cd aw-monitor
+   ```
+3. Instale as dependências:
+   ```bash
+   npm install
+   ```
+
+### Configuração
+
+1. Crie um arquivo `.env` na raiz do projeto com as seguintes variáveis de ambiente:
+   ```env
+   NEXT_PUBLIC_ACTIVITYWATCH_API_URL=http://localhost:5600/api
+   ```
+
+### Executando o Projeto
+
+Para iniciar o servidor de desenvolvimento, execute:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra [http://localhost:3000](http://localhost:3000) no seu navegador para visualizar a aplicação.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🧩 Estrutura de Pastas
 
-## Learn More
+```plaintext
+aw-monitor/
+├── public/         # Componentes de UI reutilizáveis
+├── src/            # Componentes de UI reutilizáveis
+└── components/     # Componentes de UI reutilizáveis
+    ├── pages/      # Páginas da aplicação Next.js
+    ├── public/     # Recursos estáticos
+    ├── styles/     # Arquivos de estilo global e específicos
+    └── utils/      # Funções e utilitários para apoio ao projeto
+```
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 📈 Roadmap
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- [ ] Integração com relatórios detalhados por tipo de evento.
+- [ ] Suporte a temas (claro e escuro).
+- [ ] Funcionalidade para exportação de dados em CSV.
+- [ ] Notificações personalizadas para eventos específicos.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 📚 Contribuição
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Contribuições são bem-vindas! Para contribuir:
+
+1. Faça um fork do projeto
+2. Crie uma branch para sua feature (`git checkout -b minha-feature`)
+3. Comite suas alterações (`git commit -m 'Adicionei uma nova feature'`)
+4. Envie para o repositório remoto (`git push origin minha-feature`)
+5. Abra um Pull Request
+
+---
+
+## 📝 Licença
+
+Este projeto está sob a licença MIT. Consulte o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+---
+
+## 💬 Contato
+
+Dúvidas ou sugestões? Entre em contato:
+
+- **Email**: edilasio@live.com
+- **LinkedIn**: [PEAL](https://www.linkedin.com/in/peal-26)
+
+---
+
+Aproveite o AW Monitor para uma visualização aprimorada dos seus eventos do ActivityWatch! 🎉
