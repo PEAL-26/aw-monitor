@@ -1,8 +1,8 @@
 import { type ApiRequestConfig, api } from "@/lib/axios";
 
 export type ListEventsParams = {
-  start?: Date;
-  end?: Date;
+  start?: string;
+  end?: string;
   limit?: number;
   page?: number;
 };
@@ -40,15 +40,19 @@ export async function listEventsService(
   params?: ListEventsParams,
   config?: ApiRequestConfig
 ) {
-  const { limit = 10, page = 1, ...param } = params || {};
+  const { limit = 10, page = 1, start, end } = params || {};
   const [totalItems, response] = await Promise.all([
     api.get<number>(`/0/buckets/${bucketId}/events/count`, {
       ...config,
-      params: { ...param },
+      params: { ...(start ? { start } : {}), ...(end ? { end } : {}) },
     }),
     api.get<ListEventsResponseData[]>(`/0/buckets/${bucketId}/events`, {
       ...config,
-      params: { limit: limit * 10, ...param },
+      params: {
+        limit: limit * 10,
+        ...(start ? { start } : {}),
+        ...(end ? { end } : {}),
+      },
     }),
   ]);
 
